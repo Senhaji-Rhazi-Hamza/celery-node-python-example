@@ -1,0 +1,21 @@
+x-back-env-file: &back-env-file
+  - configmaps/pyenvs/local.env
+
+version: "3.9"  # optional since v1.27.0
+services:
+  py_worker:
+    image: py_worker
+    env_file: *back-env-file
+    depends_on:
+      - redisq
+    restart: 'no'
+  js_worker:
+    image: js_worker
+    env_file: *back-env-file
+    depends_on:
+      - redisq
+    restart: 'no'
+  redisq:
+    image: redis
+    ports:
+      - "6379:6379"
