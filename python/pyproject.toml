@@ -14,6 +14,7 @@ pytest = "^5.2"
 ipykernel = "^5.5.5"
 ipython = "^7.23.1"
 watchdog = "^2.1.2"
+black = {version = "^21.9b0", allow-prereleases = true}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

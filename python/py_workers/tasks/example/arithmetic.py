@@ -1,4 +1,4 @@
-from py_workers.main import celery_app
+from py_workers.worker import celery_app
 
 
 @celery_app.task
