@@ -5,6 +5,7 @@ import celeryConfig from './config.js'
 const client = celery.createClient(
   celeryConfig.BROKER_URL,
   celeryConfig.CELERY_RESULT_BACKEND,
+  celeryConfig.QUEUE
 );
 
 //const task = client.createTask("app.tasks.add");
