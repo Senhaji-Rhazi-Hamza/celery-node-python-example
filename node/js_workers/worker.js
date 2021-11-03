@@ -2,7 +2,7 @@ import celery from "celery-node";
 
 import celeryConfig from './config.js'
 
-import {add, mul} from './tasks/example/arithmetic.js'
+import {add} from './tasks/example/arithmetic.js'
 
 const worker = celery.createWorker(
   celeryConfig.BROKER_URL,
