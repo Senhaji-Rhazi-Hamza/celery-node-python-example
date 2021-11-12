@@ -1,3 +1,3 @@
 #!/bin/bash
 
-celery -A py_workers.worker worker --loglevel=INFO -Q pyqueue
+celery -A py_workers.worker worker --loglevel=INFO -Q py-queue

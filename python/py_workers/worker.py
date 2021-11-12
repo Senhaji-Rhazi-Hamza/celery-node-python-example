@@ -2,7 +2,7 @@ from py_workers.config import CeleryConfig
 from celery import Celery
 
 celery_app = Celery(
-    main=CeleryConfig.CELERY_APP_NAME,
+    main=CeleryConfig.APP_NAME,
     backend=CeleryConfig.CELERY_RESULT_BACKEND,
     broker=CeleryConfig.BROKER_URL,
     include=[
