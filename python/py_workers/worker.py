@@ -10,10 +10,9 @@ celery_app = Celery(
     ],
 )
 
-queue = "pyqueue"
 
 # celery_app.conf.task_routes = {'py_workers.tasks.*': {'queue': 'pyqueue'}}
-celery_app.conf.task_routes = {"py_workers.tasks.*": {"queue": queue}}
+celery_app.conf.task_routes = {"py_workers.tasks.*": {"queue": CeleryConfig.QUEUE}}
 
 if __name__ == "__main__":
     celery_app.start()

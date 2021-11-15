@@ -7,7 +7,7 @@ import {add} from './tasks/example/arithmetic.js'
 const worker = celery.createWorker(
   celeryConfig.BROKER_URL,
   celeryConfig.CELERY_RESULT_BACKEND,
-  celeryConfig.QUEUE
+  celeryConfig.QUEUE // default js-queue
 );
 
 worker.register("js_workers.tasks.example.arithmetic.add", add);
